@@ -1,5 +1,6 @@
-package com.mutt.mutt_BE.user.domain;
+package com.mutt.mutt_BE.user_data.domain;
 
+import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

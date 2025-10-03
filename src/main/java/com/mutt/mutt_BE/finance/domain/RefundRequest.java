@@ -1,6 +1,7 @@
-package com.mutt.mutt_BE.user.domain;
+package com.mutt.mutt_BE.finance.domain;
 
 import com.mutt.mutt_BE.common.enums.RefundStatus;
+import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
