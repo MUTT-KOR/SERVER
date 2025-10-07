@@ -1,5 +1,6 @@
-package com.mutt.mutt_BE.user.domain;
+package com.mutt.mutt_BE.admin.domain;
 
+import com.mutt.mutt_BE.user.domain.Account;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -7,19 +8,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-import java.time.LocalDate;
-
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @SuperBuilder
-public class Users extends Account {
+public class Admin extends Account {
 
-    @Column(unique = true,length = 20)
-    private String phoneNumber;
 
-    private String name;
-    private LocalDate birthDate;
-
+    @Column(nullable = false)
+    private String password_hash;
 }
