@@ -1,11 +1,10 @@
 package com.mutt.mutt_BE.common.domain;
 
-import com.mutt.mutt_BE.common.enums.EntityType;
-import com.mutt.mutt_BE.common.enums.FileType;
+import com.mutt.mutt_BE.global.enums.EntityType;
+import com.mutt.mutt_BE.global.enums.FileType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 
-import java.time.LocalDateTime;
 /**
  * 파일
  * 상품, 아이디어, 리뷰 등에 첨부되는 이미지/파일을 관리

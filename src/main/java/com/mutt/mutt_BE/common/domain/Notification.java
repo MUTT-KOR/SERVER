@@ -1,6 +1,6 @@
 package com.mutt.mutt_BE.common.domain;
 
-import com.mutt.mutt_BE.common.enums.NotificationType;
+import com.mutt.mutt_BE.global.enums.NotificationType;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 import lombok.*;

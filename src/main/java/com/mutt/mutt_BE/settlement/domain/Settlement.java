@@ -1,6 +1,6 @@
 package com.mutt.mutt_BE.settlement.domain;
 
-import com.mutt.mutt_BE.common.enums.SettlementStatus;
+import com.mutt.mutt_BE.global.enums.SettlementStatus;
 import com.mutt.mutt_BE.product.domain.Product;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.mutt.mutt_BE.common.enums;
+package com.mutt.mutt_BE.global.enums;
 
 public enum ShippingStatus {
     PENDING,        // 배송 준비중

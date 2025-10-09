@@ -1,7 +1,7 @@
 package com.mutt.mutt_BE.user.domain;
 
 import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
-import com.mutt.mutt_BE.common.enums.UserRole;
+import com.mutt.mutt_BE.global.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

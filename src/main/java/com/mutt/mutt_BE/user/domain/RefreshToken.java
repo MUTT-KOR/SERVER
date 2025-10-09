@@ -1,6 +1,6 @@
 package com.mutt.mutt_BE.user.domain;
 
-import com.mutt.mutt_BE.common.enums.TokenType;
+import com.mutt.mutt_BE.global.enums.TokenType;
 import jakarta.persistence.*;
 import lombok.*;
 

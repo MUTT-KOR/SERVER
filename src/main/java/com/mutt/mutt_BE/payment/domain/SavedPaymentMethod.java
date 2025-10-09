@@ -1,7 +1,7 @@
 package com.mutt.mutt_BE.payment.domain;
 
 import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
-import com.mutt.mutt_BE.common.enums.PaymentMethodType;
+import com.mutt.mutt_BE.global.enums.PaymentMethodType;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 import lombok.*;

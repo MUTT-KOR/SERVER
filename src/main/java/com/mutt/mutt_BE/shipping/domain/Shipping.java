@@ -1,14 +1,13 @@
 package com.mutt.mutt_BE.shipping.domain;
 
 import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
-import com.mutt.mutt_BE.common.enums.ShippingStatus;
+import com.mutt.mutt_BE.global.enums.ShippingStatus;
 import com.mutt.mutt_BE.order.domain.Order;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 /**

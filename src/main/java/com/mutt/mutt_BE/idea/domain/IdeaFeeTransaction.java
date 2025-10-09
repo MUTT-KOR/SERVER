@@ -2,8 +2,8 @@ package com.mutt.mutt_BE.idea.domain;
 
 import com.mutt.mutt_BE.address.domain.AddressSnapshot;
 import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
-import com.mutt.mutt_BE.common.enums.PgProvider;
-import com.mutt.mutt_BE.common.enums.TransactionStatus;
+import com.mutt.mutt_BE.global.enums.PgProvider;
+import com.mutt.mutt_BE.global.enums.TransactionStatus;
 import com.mutt.mutt_BE.user.domain.Users;
 import com.mutt.mutt_BE.address.domain.Address;
 import jakarta.persistence.*;

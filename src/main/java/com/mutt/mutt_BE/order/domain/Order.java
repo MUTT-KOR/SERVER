@@ -2,8 +2,8 @@ package com.mutt.mutt_BE.order.domain;
 
 import com.mutt.mutt_BE.address.domain.AddressSnapshot;
 import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
-import com.mutt.mutt_BE.common.enums.OrderStatus;
-import com.mutt.mutt_BE.common.enums.OrderType;
+import com.mutt.mutt_BE.global.enums.OrderStatus;
+import com.mutt.mutt_BE.global.enums.OrderType;
 import com.mutt.mutt_BE.address.domain.Address;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
