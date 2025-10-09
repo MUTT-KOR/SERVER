@@ -12,6 +12,16 @@ import lombok.*;
 
 import java.math.BigDecimal;
 
+
+/**
+ * 주문 항목 엔티티
+ * 주문에 포함된 개별 상품 정보를 관리 (상품, 수량, 가격 등)
+ * Order의 생명주기에 종속,
+ * TODO : linePrice는 자동 계산처리하기
+ * 계산식: linePrice = unitPrice × quantity으로 우선 처리.
+ *
+ * @see Order
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -39,14 +49,16 @@ public class OrderItem extends BaseTimeEntity {
     @Max(999)
     private Integer quantity;
 
-    @Column(nullable = false,precision = 9,scale = 2)
+    //최대 99만원
+    @Column(nullable = false, precision = 8, scale = 2)
     @DecimalMin(value = "0.01")
-    @DecimalMax(value = "999999999.99")
+    @DecimalMax(value = "999999.99")
     private BigDecimal unitPrice;
 
+    //최대 999만원
     @Column(nullable = false,precision = 9,scale = 2)
     @DecimalMin(value = "0.01")
-    @DecimalMax(value = "999999999.99")
+    @DecimalMax(value = "9999999.99")
     private BigDecimal linePrice;
 
     //TODO : productOption고려해서 계산 수정

@@ -15,6 +15,21 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * 주문 엔티티
+ * 사용자의 주문 정보를 관리 (총 금액, 배송지, 상태 등)
+ * 여러 개의 OrderItem으로 구성되며, Payment와 1:1 연관
+ *
+ * 양방향 관계:
+ * - 1:N ↔ OrderItem (주문 항목, Cascade.ALL + orphanRemoval)
+ *
+ * 단방향 관계:
+ * - N:1 → Users (주문자)
+ * - N:1 → Address (배송지)
+ * - 1:1 → Payment (결제)
+ * - 1:1 → Shipping (배송)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -32,11 +47,11 @@ public class Order extends BaseTimeEntity {
 
     @Column(nullable = false,precision = 9,scale = 2)
     @DecimalMin(value = "0.01")
-    @DecimalMax(value = "999999999.99")
+    @DecimalMax(value = "9999999.99")
     private BigDecimal totalPrice;
 
     @Column(nullable = false,precision = 7,scale = 2)
-    @DecimalMin(value = "0.01")
+    @DecimalMin(value = "0.00")
     @DecimalMax(value = "99999.99")
     private BigDecimal shippingFee; // 배송비
 

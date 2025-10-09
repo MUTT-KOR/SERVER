@@ -10,7 +10,12 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
-
+/**
+ * 생성/수정 시간 추적 기본 클래스
+ * 모든 엔티티의 생성 시간과 수정 시간을 자동으로 관리
+ *
+ * 상속받는 엔티티: 거의 모든 엔티티
+ */
 @MappedSuperclass
 @SuperBuilder
 @NoArgsConstructor

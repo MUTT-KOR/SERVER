@@ -9,6 +9,14 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.*;
 
+/**
+ * 장바구니 항목 엔티티
+ * 장바구니에 담긴 개별 상품 정보를 관리 (상품, 옵션, 수량 등)
+ * Cart의 생명주기에 종속되며, 선택 여부(isChecked)로 주문 대상 관리
+ *
+ * @see Cart
+ */
+
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

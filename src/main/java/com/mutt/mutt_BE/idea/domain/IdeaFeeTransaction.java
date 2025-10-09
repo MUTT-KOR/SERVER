@@ -15,7 +15,15 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
+/**
+ * 아이디어 등록비 결제 엔티티
+ * 아이디어 제안 시 발생하는 등록비 결제 정보를 관리
+ * PG사 연동을 통해 실제 결제 처리하며, 배송지 정보도 스냅샷으로 보관
+ *
+ * TODO 결제 성공 시 Idea.isFeePaid = true 업데이트
+ *
+ * @see Idea
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -35,9 +43,10 @@ public class IdeaFeeTransaction extends BaseTimeEntity {
     @OneToOne(fetch = FetchType.LAZY)
     private Idea idea;
 
-    @Column(nullable = false,precision = 9,scale = 2)
+    //최대 9만원
+    @Column(nullable = false,precision = 7,scale = 2)
     @DecimalMin(value = "0.00")
-    @DecimalMax(value = "9999999.99")
+    @DecimalMax(value = "99999.99")
     private BigDecimal ideaFee;
 
 

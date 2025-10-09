@@ -12,7 +12,18 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-/*수정 더 해야함. */
+/**
+ * 정산 엔티티
+ * 판매자에게 지급할 월별 정산 내역을 관리
+ * 매출, 수수료, 실 정산금액을 계산하여 보관
+ *
+ * TODO : 계산식 짜기
+ * 계산식: netAmount = totalRevenue × (1 - commissionRate / 100)
+ *
+ * 관계:
+ * - N:1 → Users (판매자)
+ * - N:1 → Product (정산 대상 상품)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -33,13 +44,12 @@ public class Settlement {
 
     @Column(nullable = false)
     @Min(0)
-    @Builder.Default
-    private Integer orderCount=0;
+    private Integer orderCount;
 
-    // 총 매출액 (최대 999,999,999.99원)
-    @Column(nullable = false,precision = 11, scale = 2)
+    // 총 매출액 최대 : 999만원
+    @Column(nullable = false,precision = 9, scale = 2)
     @DecimalMin(value = "0.00")
-    @DecimalMax(value = "9999999999.99")
+    @DecimalMax(value = "9999999.99")
     private BigDecimal totalRevenue;
 
     // 수수료 :
@@ -48,9 +58,9 @@ public class Settlement {
     @DecimalMax(value = "100.00")
     private BigDecimal commissionRate;
 
-    @Column(nullable = false,precision = 11, scale = 2)
+    @Column(nullable = false,precision = 9, scale = 2)
     @DecimalMin(value = "0.00")
-    @DecimalMax(value = "9999999999.99")
+    @DecimalMax(value = "9999999.99")
     private BigDecimal netAmount;
 
     // 2025-03

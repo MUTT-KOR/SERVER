@@ -6,7 +6,12 @@ import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
-
+/**
+ * 하나의 Users가 여러 소셜 계정을 연결 가능
+ *
+ * 관계:
+ * - N:1 → Users (소셜 계정 소유자)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

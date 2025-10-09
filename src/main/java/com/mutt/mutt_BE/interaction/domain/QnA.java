@@ -1,4 +1,4 @@
-package com.mutt.mutt_BE.interation.domain;
+package com.mutt.mutt_BE.interaction.domain;
 
 import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
 import com.mutt.mutt_BE.product.domain.Product;
@@ -7,7 +7,14 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-
+/**
+ *
+ *관리자(mutt)가 답변 가능하며, 답변 여부 추적가능.
+ *
+ * 관계:
+ * - N:1 → Product (문의 대상 상품)
+ * - N:1 → Users (문의 작성자)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

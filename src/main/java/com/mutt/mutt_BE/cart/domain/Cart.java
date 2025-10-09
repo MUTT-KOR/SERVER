@@ -6,7 +6,14 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
-
+/**
+ * 장바구니 엔티티
+ * 사용자의 장바구니를 관리하며, 여러 CartItem을 포함
+ * Users와 1:1 관계 (사용자당 하나의 장바구니)
+ *
+ * 양방향 관계:
+ * - 1:N ↔ CartItem (장바구니 항목, Cascade.ALL + orphanRemoval)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

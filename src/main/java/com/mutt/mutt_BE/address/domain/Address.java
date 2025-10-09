@@ -8,7 +8,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+/**
+ * 배송지 엔티티
+ * 사용자의 배송지 정보를 관리
+ * 사용자는 여러 배송지를 등록 가능, 하나를 기본 배송지로 설정 가능
+ *
+ * 관계:
+ * - N:1 → Users (배송지 소유자)
+ * - 1:N ← Order (주문에서 참조)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

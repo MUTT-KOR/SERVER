@@ -10,7 +10,16 @@ import jakarta.validation.constraints.DecimalMin;
 import lombok.*;
 
 import java.math.BigDecimal;
-
+/**
+ * TODO : 결제 관련 엔티티는 수정 가능성 높음
+ * 결제 엔티티
+ * 주문에 대한 결제 정보를 관리 (PG사 연동, 결제 금액, 상태 등)
+ * PG사 연동하여 실제 결제 처리
+ *
+ * 관계:
+ * - N:1 → Order (주문)
+ * - N:1 → Users (결제자)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

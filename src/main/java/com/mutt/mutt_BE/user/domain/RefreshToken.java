@@ -5,7 +5,13 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-
+/**
+ * JWT 인증에서 Access Token 재발급을 위한 Refresh Token을 관리
+ * 만료 시간을 추적하여 자동 로그아웃 처리
+ *
+ * 관계:
+ * - N:1 → Users (토큰 소유자)
+ */
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

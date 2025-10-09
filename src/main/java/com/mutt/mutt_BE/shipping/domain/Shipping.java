@@ -11,8 +11,15 @@ import lombok.NoArgsConstructor;
 import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
-
-@Embeddable
+/**
+ * 배송
+ * 주문의 배송 상태를 관리 (운송장 번호, 배송 상태, 배송 일시 등)
+ * 택배사 API 연동을 통해 실시간 배송 추적 가능
+ *
+ * 관계:
+ * - 1:1 → Order (배송 대상 주문)
+ */
+@Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
