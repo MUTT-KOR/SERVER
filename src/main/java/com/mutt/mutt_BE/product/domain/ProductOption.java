@@ -40,7 +40,7 @@ public class ProductOption extends BaseTimeEntity {
     @Column(nullable = false, precision = 7, scale = 2)
     @DecimalMin(value = "0.00")
     @DecimalMax(value = "99999.99")
-    private BigDecimal price;
+    private BigDecimal optionpPrice;
     
     @Column(nullable = false)
     private Integer stockQuantity;

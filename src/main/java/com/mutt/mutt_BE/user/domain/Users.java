@@ -37,4 +37,5 @@ public class Users extends Account {
     private boolean isActive;
     private LocalDateTime withdrawalAt;
     private String withdrawal_reason;
+
 }

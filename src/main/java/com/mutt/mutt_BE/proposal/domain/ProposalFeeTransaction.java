@@ -44,10 +44,10 @@ public class ProposalFeeTransaction extends BaseTimeEntity {
     @OneToOne(fetch = FetchType.LAZY)
     private BaseProposal proposal;
 
-    //최대 9만원
-    @Column(nullable = false,precision = 7,scale = 2)
+    //최대 99만원
+    @Column(nullable = false,precision = 8,scale = 2)
     @DecimalMin(value = "0.00")
-    @DecimalMax(value = "99999.99")
+    @DecimalMax(value = "999999.99")
     private BigDecimal proposalFee;
 
 
