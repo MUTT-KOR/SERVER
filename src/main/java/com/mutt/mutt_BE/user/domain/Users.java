@@ -18,6 +18,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@Table(name = "users")
 @SuperBuilder
 public class Users extends Account {
 

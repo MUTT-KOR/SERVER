@@ -5,6 +5,7 @@ import com.mutt.mutt_BE.global.enums.PaymentMethodType;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 /**
  * TODO : 결제 관련 엔티티는 수정 가능성 높음
@@ -19,7 +20,8 @@ import lombok.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
+@Table(name = "saved_payment_method")
+@SuperBuilder
 public class SavedPaymentMethod extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

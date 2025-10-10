@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
  * - 1:1 → Order (배송 대상 주문)
  */
 @Entity
+@Table(name = "shipping")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor

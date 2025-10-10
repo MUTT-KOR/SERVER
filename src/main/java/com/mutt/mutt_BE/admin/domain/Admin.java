@@ -17,6 +17,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@Table(name = "admin")
 @SuperBuilder
 public class Admin extends Account {
 

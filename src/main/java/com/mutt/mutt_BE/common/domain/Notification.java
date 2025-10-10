@@ -4,6 +4,7 @@ import com.mutt.mutt_BE.global.enums.NotificationType;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 /**
@@ -17,7 +18,8 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
+@Table(name = "notification")
+@SuperBuilder
 public class Notification extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

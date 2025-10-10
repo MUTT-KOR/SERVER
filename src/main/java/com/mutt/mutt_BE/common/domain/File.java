@@ -18,6 +18,7 @@ import jakarta.validation.constraints.Min;
  * 사용 예: Product의 상세 이미지, Review의 포토 리뷰
  */
 @Entity
+@Table(name = "file")
 public class File extends BaseTimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

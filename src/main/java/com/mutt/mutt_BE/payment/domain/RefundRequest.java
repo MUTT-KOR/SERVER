@@ -6,6 +6,7 @@ import com.mutt.mutt_BE.order.domain.OrderItem;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 
 /**
@@ -22,7 +23,8 @@ import lombok.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
+@Table(name = "refund_request")
+@SuperBuilder
 public class RefundRequest extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

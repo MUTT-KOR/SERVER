@@ -11,6 +11,7 @@ import lombok.*;
 
 import com.mutt.mutt_BE.common.domain.SizeInfo;
 import jakarta.persistence.Embedded;
+import lombok.experimental.SuperBuilder;
 
 /**
  * 아이디어 엔티티
@@ -25,7 +26,8 @@ import jakarta.persistence.Embedded;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
+@Table(name = "idea")
+@SuperBuilder
 public class Idea extends BaseTimeEntity {
 
     @Id

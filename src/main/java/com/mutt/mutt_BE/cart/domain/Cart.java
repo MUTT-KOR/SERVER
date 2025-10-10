@@ -4,6 +4,7 @@ import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 /**
@@ -18,7 +19,8 @@ import java.util.List;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
+@Table(name = "cart")
+@SuperBuilder
 public class Cart extends BaseTimeEntity {
 
     @Id

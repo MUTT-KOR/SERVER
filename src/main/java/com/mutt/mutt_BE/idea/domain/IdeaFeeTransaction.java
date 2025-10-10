@@ -25,6 +25,7 @@ import java.time.LocalDateTime;
  * @see Idea
  */
 @Entity
+@Table(name = "idea_fee_transaction")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class IdeaFeeTransaction extends BaseTimeEntity {
