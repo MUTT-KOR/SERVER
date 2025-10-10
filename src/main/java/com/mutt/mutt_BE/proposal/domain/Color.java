@@ -1,8 +1,8 @@
-package com.mutt.mutt_BE.idea.domain;
+package com.mutt.mutt_BE.proposal.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.SuperBuilder;
+
 /**
  * 색상 마스터 엔티티
  * 아이디어에서 선택 가능한 색상 정보를 관리

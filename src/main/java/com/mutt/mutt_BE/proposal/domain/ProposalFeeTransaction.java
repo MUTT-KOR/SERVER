@@ -1,4 +1,4 @@
-package com.mutt.mutt_BE.idea.domain;
+package com.mutt.mutt_BE.proposal.domain;
 
 import com.mutt.mutt_BE.address.domain.AddressSnapshot;
 import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
@@ -25,10 +25,10 @@ import java.time.LocalDateTime;
  * @see Idea
  */
 @Entity
-@Table(name = "idea_fee_transaction")
+@Table(name = "proposal_fee_transaction")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class IdeaFeeTransaction extends BaseTimeEntity {
+public class ProposalFeeTransaction extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,13 +42,13 @@ public class IdeaFeeTransaction extends BaseTimeEntity {
     private boolean isUserVerified;
 
     @OneToOne(fetch = FetchType.LAZY)
-    private Idea idea;
+    private BaseProposal proposal;
 
     //최대 9만원
     @Column(nullable = false,precision = 7,scale = 2)
     @DecimalMin(value = "0.00")
     @DecimalMax(value = "99999.99")
-    private BigDecimal ideaFee;
+    private BigDecimal proposalFee;
 
 
     @Column(nullable = false)

@@ -4,7 +4,7 @@ import com.mutt.mutt_BE.common.domain.BaseTimeEntity;
 import com.mutt.mutt_BE.common.domain.Category;
 import com.mutt.mutt_BE.common.domain.SizeInfo;
 import com.mutt.mutt_BE.global.enums.ProductStatus;
-import com.mutt.mutt_BE.idea.domain.Idea;
+import com.mutt.mutt_BE.proposal.domain.Idea;
 import com.mutt.mutt_BE.user.domain.Users;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMax;
